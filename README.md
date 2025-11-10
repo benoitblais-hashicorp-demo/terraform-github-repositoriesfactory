@@ -438,7 +438,7 @@ Description: (Optional) The list of topics of the repository.
 
 Type: `list(string)`
 
-Default: `null`
+Default: `[]`
 
 ### <a name="input_visibility"></a> [visibility](#input\_visibility)
 
