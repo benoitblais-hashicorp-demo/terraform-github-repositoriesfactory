@@ -17,16 +17,16 @@ The GitHub provider requires a GitHub token or GitHub App installation in order 
 
 There are several ways to provide the required token:
 
-- Set the `token` argument in the provider configuration. You can set the `token` argument in the provider configuration. Use an
+* Set the `token` argument in the provider configuration. You can set the `token` argument in the provider configuration. Use an
 input variable for the token.
-- Set the `GITHUB_TOKEN` environment variable. The provider can read the `GITHUB_TOKEN` environment variable and the token stored there
+* Set the `GITHUB_TOKEN` environment variable. The provider can read the `GITHUB_TOKEN` environment variable and the token stored there
 to authenticate.
 
 There are several ways to provide the required GitHub App installation:
 
-- Set the `app_auth` argument in the provider configuration. You can set the app\_auth argument with the id, installation\_id and pem\_file
+* Set the `app_auth` argument in the provider configuration. You can set the app\_auth argument with the id, installation\_id and pem\_file
 in the provider configuration. The owner parameter is also required in this situation.
-- Set the `GITHUB_APP_ID`, `GITHUB_APP_INSTALLATION_ID` and `GITHUB_APP_PEM_FILE` environment variables. The provider can read the GITHUB\_APP\_ID,
+* Set the `GITHUB_APP_ID`, `GITHUB_APP_INSTALLATION_ID` and `GITHUB_APP_PEM_FILE` environment variables. The provider can read the GITHUB\_APP\_ID,
 GITHUB\_APP\_INSTALLATION\_ID and GITHUB\_APP\_PEM\_FILE environment variables to authenticate.
 
 > Because strings with new lines is not support:</br>
@@ -35,8 +35,8 @@ GITHUB\_APP\_INSTALLATION\_ID and GITHUB\_APP\_PEM\_FILE environment variables t
 
 ## Features
 
-- Create and manage repositories within your GitHub organization or personal account.
-- Configure branch protection for repositories in your organization or personal account.
+* Create and manage repositories within your GitHub organization or personal account.
+* Configure branch protection for repositories in your organization or personal account.
 
 ## Usage example
 
@@ -56,6 +56,8 @@ module "repository" {
 The following requirements are needed by this module:
 
 - <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) (>= 1.13.0)
+
+- <a name="requirement_github"></a> [github](#requirement\_github) (~>6.6.0)
 
 ## Modules
 
@@ -458,8 +460,8 @@ Default: `true`
 
 The following resources are used by this module:
 
-- [github_branch_protection.this](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/branch_protection) (resource)
-- [github_repository.this](https://registry.terraform.io/providers/hashicorp/github/latest/docs/resources/repository) (resource)
+- [github_branch_protection.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/branch_protection) (resource)
+- [github_repository.this](https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository) (resource)
 
 ## Outputs
 
