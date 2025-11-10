@@ -250,7 +250,7 @@ variable "template" {
 variable "topics" {
   description = "(Optional) The list of topics of the repository."
   type        = list(string)
-  default     = null
+  default     = []
 }
 
 variable "visibility" {
