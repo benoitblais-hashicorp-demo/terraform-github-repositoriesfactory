@@ -81,9 +81,9 @@ Type: `string`
 
 ### <a name="input_topics"></a> [topics](#input\_topics)
 
-Description: (Required) The list of topics of the repository.
+Description: (Required) The list of topics of the repository (comma separated).
 
-Type: `list(string)`
+Type: `string`
 
 ## Optional Inputs
 
@@ -435,14 +435,6 @@ object({
 ```
 
 Default: `null`
-
-### <a name="input_topics"></a> [topics](#input\_topics)
-
-Description: (Optional) The list of topics of the repository.
-
-Type: `list(string)`
-
-Default: `[]`
 
 ### <a name="input_visibility"></a> [visibility](#input\_visibility)
 
