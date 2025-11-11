@@ -9,13 +9,11 @@ variable "name" {
 variable "description" {
   description = "(Required) A description of the repository."
   type        = string
-  nullable    = false
 }
 
 variable "topics" {
-  description = "(Required) The list of topics of the repository."
-  type        = list(string)
-  nullable    = false
+  description = "(Required) The list of topics of the repository (comma separated)."
+  type        = string
 }
 
 variable "allow_auto_merge" {
