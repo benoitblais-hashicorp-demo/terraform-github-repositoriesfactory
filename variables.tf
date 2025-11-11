@@ -3,6 +3,19 @@
 variable "name" {
   description = "(Required) The name of the repository."
   type        = string
+  nullable    = false
+}
+
+variable "description" {
+  description = "(Required) A description of the repository."
+  type        = string
+  nullable    = false
+}
+
+variable "topics" {
+  description = "(Required) The list of topics of the repository."
+  type        = list(string)
+  nullable    = false
 }
 
 variable "allow_auto_merge" {
@@ -57,12 +70,6 @@ variable "delete_branch_on_merge" {
   description = "(Optional) Automatically delete head branch after a pull request is merged."
   type        = bool
   default     = true
-}
-
-variable "description" {
-  description = "(Optional) A description of the repository."
-  type        = string
-  default     = null
 }
 
 variable "gitignore_template" {
@@ -245,12 +252,6 @@ variable "template" {
     include_all_branches = optional(bool, false)
   })
   default = null
-}
-
-variable "topics" {
-  description = "(Optional) The list of topics of the repository."
-  type        = list(string)
-  default     = []
 }
 
 variable "visibility" {

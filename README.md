@@ -67,11 +67,23 @@ No modules.
 
 The following input variables are required:
 
+### <a name="input_description"></a> [description](#input\_description)
+
+Description: (Required) A description of the repository.
+
+Type: `string`
+
 ### <a name="input_name"></a> [name](#input\_name)
 
 Description: (Required) The name of the repository.
 
 Type: `string`
+
+### <a name="input_topics"></a> [topics](#input\_topics)
+
+Description: (Required) The list of topics of the repository.
+
+Type: `list(string)`
 
 ## Optional Inputs
 
@@ -237,14 +249,6 @@ Description: (Optional) Automatically delete head branch after a pull request is
 Type: `bool`
 
 Default: `true`
-
-### <a name="input_description"></a> [description](#input\_description)
-
-Description: (Optional) A description of the repository.
-
-Type: `string`
-
-Default: `null`
 
 ### <a name="input_gitignore_template"></a> [gitignore\_template](#input\_gitignore\_template)
 
@@ -467,10 +471,6 @@ The following resources are used by this module:
 
 The following outputs are exported:
 
-### <a name="output_branch_protection"></a> [branch\_protection](#output\_branch\_protection)
-
-Description: GitHub branch protection within your GitHub repository.
-
 ### <a name="output_full_name"></a> [full\_name](#output\_full\_name)
 
 Description: A string of the form "orgname/reponame".
@@ -487,28 +487,9 @@ Description: URL to the repository on the web.
 
 Description: URL that can be provided to git clone to clone the repository via HTTPS.
 
-### <a name="output_node_id"></a> [node\_id](#output\_node\_id)
-
-Description: GraphQL global node id for use with v4 API.
-
-### <a name="output_pages"></a> [pages](#output\_pages)
-
-Description:   The block consisting of the repository's GitHub Pages configuration with the following additional attributes:  
-    custom\_404 : Whether the rendered GitHub Pages site has a custom 404 page.  
-    html\_url   : The absolute URL (including scheme) of the rendered GitHub Pages site e.g. https://username.github.io.  
-    status     : The GitHub Pages site's build status e.g. building or built.
-
-### <a name="output_primary_language"></a> [primary\_language](#output\_primary\_language)
-
-Description: The primary language used in the repository.
-
 ### <a name="output_repo_id"></a> [repo\_id](#output\_repo\_id)
 
 Description: GitHub ID for the repository.
-
-### <a name="output_repository"></a> [repository](#output\_repository)
-
-Description: Repositories within your GitHub organization.
 
 ### <a name="output_ssh_clone_url"></a> [ssh\_clone\_url](#output\_ssh\_clone\_url)
 
