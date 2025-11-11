@@ -436,6 +436,14 @@ object({
 
 Default: `null`
 
+### <a name="input_topics"></a> [topics](#input\_topics)
+
+Description: (Optional) The list of topics of the repository.
+
+Type: `list(string)`
+
+Default: `[]`
+
 ### <a name="input_visibility"></a> [visibility](#input\_visibility)
 
 Description: (Optional) Can be public or private. If your organization is associated with an enterprise account using GitHub Enterprise Cloud or GitHub Enterprise Server 2.20+, visibility can also be internal.
